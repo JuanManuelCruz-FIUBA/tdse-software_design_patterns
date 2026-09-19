@@ -21,12 +21,12 @@
 ---
 
 ### Proyectos usados en los TP´s
-| Name                      | STM32 Project Name                | OK |
-| ------------------------- | --------------------------------- | -- |
-| Native STM32 Project      | tdse-tp0_01-stm32_project         |    |
-| Semihosting STM32 Project | tdse-tp0_02-semihosting           |    |
-| Cyclic Executive          | tdse-tp0_03-cyclic_executive      |    |
-| Model Integration         | tdse-tp2_00-model_integration     |    |
-| Porting C Code 01         | tdse-tp3_01-porting_c_code_solved |    |
-| Porting C Code 02         | tdse-tp3_02-porting_c_code_solved |    |
-| Syetem Setup Menu         | tdse-tp3_03-system_setup_menu     |    | 
+| Name                 | STM32 Project Name                | OK |
+| -------------------- | --------------------------------- | -- |
+| Native STM32 Project | tdse-tp0_01-stm32_project         |    |
+| Semihosting          | tdse-tp0_02-semihosting           |    |
+| Cyclic Executive     | tdse-tp0_03-cyclic_executive      |    |
+| Model Integration    | tdse-tp2_00-model_integration     |    |
+| Porting C Code 01    | tdse-tp3_01-porting_c_code_solved |    |
+| Porting C Code 02    | tdse-tp3_02-porting_c_code_solved |    |
+| Syetem Setup Menu    | tdse-tp3_03-system_setup_menu     |    | 
