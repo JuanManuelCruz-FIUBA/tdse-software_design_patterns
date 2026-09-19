@@ -3,7 +3,7 @@
 ### Contexto
 
 <details>
-<summary>Codificamos soluciones del tipo:</summary>
+<summary>Codificamos en C, soluciones del tipo:</summary>
 
 * **Bare Metal** (sin Sistema Operativo)
   * **Cyclic Executive**
