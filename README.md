@@ -29,4 +29,4 @@
 | Model Integration    | tdse-tp2_00-model_integration     |    |
 | Porting C Code 01    | tdse-tp3_01-porting_c_code_solved |    |
 | Porting C Code 02    | tdse-tp3_02-porting_c_code_solved |    |
-| Syetem Setup Menu    | tdse-tp3_03-system_setup_menu     |    | 
+| System Setup Menu    | tdse-tp3_03-system_setup_menu     |    | 
