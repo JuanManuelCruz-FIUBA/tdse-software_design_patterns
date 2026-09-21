@@ -2,14 +2,7 @@
 ## Software Design Patterns
 ### Contexto
 
-</details>
-
-<details>
-<summary><b>Software Design Patterns</b></summary>
-
-  * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
-
-</details>
+* Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
 
 <details>
 <summary><b>Codificamos en C, soluciones del tipo ...</b></summary>
