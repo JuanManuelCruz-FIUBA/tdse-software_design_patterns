@@ -60,6 +60,7 @@ static void MX_USART2_UART_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+
 #if (1 == LOGGER_CONFIG_USE_SEMIHOSTING)
 
 extern void initialise_monitor_handles(void);
@@ -76,6 +77,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
+
   #if (1 == LOGGER_CONFIG_USE_SEMIHOSTING)
 
   initialise_monitor_handles();
@@ -120,6 +122,7 @@ int main(void)
 
     /* Application Update */
     app_update();
+
   }
   /* USER CODE END 3 */
 }
