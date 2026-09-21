@@ -24,83 +24,6 @@
 </details>
 
 <details>
-<summary><b>STM32 Project ...</b></summary>
-
-  * Proyecto generado con **STM32CubeIde** (*STM32CubeMX*), mediante la opción *File > New > STM32 Project*, que permite iniciar desde cero un archivo de proyecto, seleccionando el *chip* o la *placa* que se va a usar (en nuestro caso la *placa*).
-  * Contiene una estructura de directorios de base (ver *árbol de directorios* al pie) y  entre otros, archivos de encabezamiento (```.h```), de código fuente (```.c, .s```), de comentario (```.txt```) y de configuración ```.ioc```.
-    * El *árbol de directorios*, contiene la carpeta *Core*, destinada a almacenar código fuente y archivos de configuración creados por el usuario o generados por *STM32CubeMX* para hacer funcionar el microcontrolador.
-    * En éstos archivos, el usuario debe insertar su código estrictamente dentro de los bloques de comentarios ```USER CODE``` que genera automáticamente el entorno.
-      * Si escribes código fuera de estas secciones, *STM32CubeMX* borrará todo tu trabajo la próxima vez que regeneres el proyecto desde la interfaz gráfica.  
-
-```
-stm32_project
-├───.settings
-├───Core
-│   ├───Inc
-│   ├───Src
-│   └───Startup
-└───Drivers
-    ├───CMSIS
-    │   ├───Device
-    │   │   └───ST
-    │   │       └───STM32F1xx
-    │   │           ├───Include
-    │   │           └───Source
-    │   │               └───Templates
-    │   └───Include
-    └───STM32F1xx_HAL_Driver
-        ├───Inc
-        │   └───Legacy
-        └───Src
-```
-
-</details>
-
-<details>
-<summary><b>Semihosting ...</b></summary>
-
-  * Semihosting es un mecanismo que permite al microcontrolador usar los recursos de tu computadora (como la pantalla, el teclado o archivos), a través de la placa de depuración.
-    * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico, requiere de:
-      * Configurar el linker para agregar una biblioteca (y sus opciones de linkeo).
-      * Excluir un archivo de la compilación para evitar conflictos con las llamadas al sistema del semihosting.
-      * Configurar el depurador (*OpenOCD*).
-      * Modificar el código fuente  código en el archivo (```main.c```), como se detalla a continuación.
-  
-```
-semihosting/Code/Src/main.c
-
-/* USER CODE BEGIN Includes */
-
-#include "stdio.h"
-
-/* USER CODE END Includes */
-
-. . .
-
-/* USER CODE BEGIN 0 */
-
-extern void initialise_monitor_handles(void);
-
-/* USER CODE END 0 */
-  . . .
-
-  /* USER CODE BEGIN 1 */
-
-  initialise_monitor_handles();
-
-  /* USER CODE END 1 */
-  . . .
-
-  /* USER CODE BEGIN 2 */
-
-  printf("Hello World!\n");
-
-  /* USER CODE END 2 */
-```
-
-</details>
-
-<details>
 <summary><b>Cyclic Executive ...</b></summary>
 
   * Modelo de *programación* y *planificación* de **tareas**
@@ -220,6 +143,6 @@ cyclic_executive
 | Referencias | Fuentes |   |
 | :------- | :----| - |
 | [<b>STM32 Project</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/STM32_Project.md) | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
-| <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
+| [<b>Semihosting</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Semihosting.md) | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
 | <b>Cyclic Executive</b> | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | <b>X</b> |
 | <b>Model Integration</b> | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
