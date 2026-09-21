@@ -56,6 +56,46 @@ stm32_project
 </details>
 
 <details>
+<summary>Semihosting</summary>
+
+  * Semihosting es un mecanismo que permite al microcontrolador usar los recursos de tu computadora (como la pantalla, el teclado o archivos), a través de la placa de depuración.
+    * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico.
+    * Requiere agregar algunas líneas de código en el archivo ```main.c``` (ver código al pie).
+    * Requiere de configurar el linker para agregar una biblioteca (y sus opciones de linkeo) y excluir un archivo de la compilación para evitar conflictos con las llamadas al sistema del semihosting.
+  
+  ```
+/* USER CODE BEGIN Includes */
+
+#include "stdio.h"
+
+/* USER CODE END Includes */
+
+. . .
+
+/* USER CODE BEGIN 0 */
+
+extern void initialise_monitor_handles(void);
+
+/* USER CODE END 0 */
+  . . .
+
+  /* USER CODE BEGIN 1 */
+
+  initialise_monitor_handles();
+
+  /* USER CODE END 1 */
+  . . .
+
+  /* USER CODE BEGIN 2 */
+
+  printf("Hello World!\n");
+
+  /* USER CODE END 2 */
+  ```
+
+</details>
+
+<details>
 <summary>Software Design Patterns:</summary>
 
   * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
@@ -64,10 +104,10 @@ stm32_project
 ---
 
 ### Proyectos de referencia
-| Proyecto          | Nombre                            |   |
-| ----------------- | ----------------------------------| - |
-| STM32 Project     | stm32_project                     | X |
-| Semihosting       | tdse-tp0_02-semihosting           |   |
+| Proyecto          | Link |   |
+| :---------------- | :----| - |
+| STM32 Project     | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | X |
+| Semihosting       | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | X |
 | Cyclic Executive  | tdse-tp0_03-cyclic_executive      |   |
 | Model Integration | tdse-tp2_00-model_integration     |   |
 | Porting C Code 01 | tdse-tp3_01-porting_c_code_solved |   |
