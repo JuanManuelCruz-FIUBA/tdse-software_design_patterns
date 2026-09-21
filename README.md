@@ -59,11 +59,13 @@ stm32_project
 <summary>Semihosting</summary>
 
   * Semihosting es un mecanismo que permite al microcontrolador usar los recursos de tu computadora (como la pantalla, el teclado o archivos), a través de la placa de depuración.
-    * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico.
-    * Requiere agregar algunas líneas de código en el archivo ```main.c``` (ver código al pie).
-    * Requiere de configurar el linker para agregar una biblioteca (y sus opciones de linkeo) y excluir un archivo de la compilación para evitar conflictos con las llamadas al sistema del semihosting.
+    * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico, requiere de:
+      * Configurar el linker para agregar una biblioteca (y sus opciones de linkeo).
+      * Excluir un archivo de la compilación para evitar conflictos con las llamadas al sistema del semihosting.
+      * Configurar el depurador (*OpenOCD*).
+      * Modificar el código fuente  código en el archivo (```main.c```), como se detalla a continuación.
   
-  ```
+```
 /* USER CODE BEGIN Includes */
 
 #include "stdio.h"
@@ -91,7 +93,7 @@ extern void initialise_monitor_handles(void);
   printf("Hello World!\n");
 
   /* USER CODE END 2 */
-  ```
+```
 
 </details>
 
