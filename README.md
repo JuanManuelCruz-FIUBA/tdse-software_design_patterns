@@ -30,6 +30,8 @@
   * **STM32CubeMX**, herramienta gráfica que simplifica la configuración de los productos STM32 y genera el código de inicialización correspondiente.
   * **HAL**, capa de abstracción de hardware de STM32, un software embebido que garantiza la máxima portabilidad en toda la gama STM32.
 
+</details>
+
 ---
 
 ### Proyectos de referencia
