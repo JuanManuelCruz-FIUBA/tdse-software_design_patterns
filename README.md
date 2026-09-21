@@ -217,9 +217,9 @@ cyclic_executive
 ---
 
 ### Proyectos de referencia
-| Proyecto | Link |   |
+| Referencias | Fuentes |   |
 | :------- | :----| - |
-| <b>STM32 Project</b> | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
+| [<b>STM32 Project</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/stm32_project.md) | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
 | <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
 | <b>Cyclic Executive</b> | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | <b>X</b> |
 | <b>Model Integration</b> | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
