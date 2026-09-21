@@ -13,20 +13,63 @@
     * **Estructurada, Modular**
       * *Escrutar - Procesar - Actuar*
     * **Software Design Patterns** (*Statecharts*)
+      * **Portabilidad, Escalabilidad, Flexibilidad, Fiabilidad, Reutilización,**
+      * **Rendimiento, Costo, Disponibilidad, Mantenibilidad, Sensibilidad,**
+      * **Simplicidad, Razonabilidad, Colaboración, Capacidad de Prueba,**
+      * **Eficiencia, Robustez, Previsibilidad, etc.**
   * **STM32CubeIDE**, entorno de desarrollo integrado multi-OS en C/C++ para el desarrollo de código STM32.
   * **STM32CubeMX**, herramienta gráfica que simplifica la configuración de los productos STM32 y genera el código de inicialización correspondiente.
   * **HAL**, capa de abstracción de hardware de STM32, un software embebido que garantiza la máxima portabilidad en toda la gama STM32.
 </details>
 
+<details>
+<summary>STM32 Project</summary>
+
+  * Proyecto generado con **STM32CubeIde** (*STM32CubeMX*), mediante la opción *File > New > STM32 Project*, que permite iniciar desde cero un archivo de proyecto, seleccionando el *chip* o la *placa* que se va a usar (en nuestro caso la *placa*).
+  * Contiene una estructura de directorios de base (ver *árbol de directorios* al pie) y  entre otros, archivos de encabezamiento (```.h```), de código fuente (```.c, .s```), de comentario (```.txt```) y de configuración ```.ioc```.
+    * El *árbol de directorios*, contiene la carpeta *Core*, destinada a almacenar código fuente y archivos de configuración creados por el usuario o generados por *STM32CubeMX* para hacer funcionar el microcontrolador.
+    * En éstos archivos, el usuario debe insertar su código estrictamente dentro de los bloques de comentarios ```USER CODE``` que genera automáticamente el entorno.
+      * Si escribes código fuera de estas secciones, *STM32CubeMX* borrará todo tu trabajo la próxima vez que regeneres el proyecto desde la interfaz gráfica.  
+
+```
+stm32_project
+├───.settings
+├───Core
+│   ├───Inc
+│   ├───Src
+│   └───Startup
+└───Drivers
+    ├───CMSIS
+    │   ├───Device
+    │   │   └───ST
+    │   │       └───STM32F1xx
+    │   │           ├───Include
+    │   │           └───Source
+    │   │               └───Templates
+    │   └───Include
+    └───STM32F1xx_HAL_Driver
+        ├───Inc
+        │   └───Legacy
+        └───Src
+```
+
+</details>
+
+<details>
+<summary>Software Design Patterns:</summary>
+
+  * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+</details>
+
 ---
 
-### Proyectos usados en los TP´s
-| Name                 | STM32 Project Name                | OK |
-| -------------------- | --------------------------------- | -- |
-| Native STM32 Project | tdse-tp0_01-stm32_project         |    |
-| Semihosting          | tdse-tp0_02-semihosting           |    |
-| Cyclic Executive     | tdse-tp0_03-cyclic_executive      |    |
-| Model Integration    | tdse-tp2_00-model_integration     |    |
-| Porting C Code 01    | tdse-tp3_01-porting_c_code_solved |    |
-| Porting C Code 02    | tdse-tp3_02-porting_c_code_solved |    |
-| System Setup Menu    | tdse-tp3_03-system_setup_menu     |    | 
+### Proyectos de referencia
+| Proyecto          | Nombre                            |   |
+| ----------------- | ----------------------------------| - |
+| STM32 Project     | stm32_project                     | X |
+| Semihosting       | tdse-tp0_02-semihosting           |   |
+| Cyclic Executive  | tdse-tp0_03-cyclic_executive      |   |
+| Model Integration | tdse-tp2_00-model_integration     |   |
+| Porting C Code 01 | tdse-tp3_01-porting_c_code_solved |   |
+| Porting C Code 02 | tdse-tp3_02-porting_c_code_solved |   |
+| System Setup Menu | tdse-tp3_03-system_setup_menu     |   | 
