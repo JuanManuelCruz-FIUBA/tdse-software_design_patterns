@@ -27,6 +27,12 @@
 
 ---
 
+### Patrones
+| Referencias |   |
+|:----------- | - |
+| | |
+
+---
 ### Proyectos de referencia
 | Referencias | Fuentes |   |
 | :------- | :----| - |
@@ -37,12 +43,6 @@
 
 ---
 
-### Patrones
-| Referencias |   |
-|:----------- | - |
-| | |
-
----
 ### Proyectos de prueba
 | Referencias | Fuentes |   |
 | :------- | :----| - |
