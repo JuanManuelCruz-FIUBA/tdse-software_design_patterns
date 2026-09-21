@@ -2,6 +2,15 @@
 ## Software Design Patterns
 ### Contexto
 
+</details>
+
+<details>
+<summary><b>Software Design Patterns</b></summary>
+
+  * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+
+</details>
+
 <details>
 <summary><b>Codificamos en C, soluciones del tipo ...</b></summary>
 
@@ -21,32 +30,6 @@
   * **STM32CubeMX**, herramienta gráfica que simplifica la configuración de los productos STM32 y genera el código de inicialización correspondiente.
   * **HAL**, capa de abstracción de hardware de STM32, un software embebido que garantiza la máxima portabilidad en toda la gama STM32.
 
-</details>
-
-<details>
-<summary><b>Model Integration</b></summary>
-
-  * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
-  * Ejemplo de *Modularización* del código en en *tareas* del tipo: **Escrutar - Procesar - Actuar**.
-    * **Escrutar**  => *Sensor*
-      * Genera sus propios *eventos* por *Polling* de **GPIO**), que estimulan su *statechart*
-      * Genera *eventos* para el módulo siguiente, mediante la *interfaz* correspondiente.
-    * **Procesar**  => *System*
-      * Recupera *eventos* generados por el módulo anterior, mediante la *interfaz* correspondiente, que estimulan su *statechart*
-      * Genera *eventos* para el módulo siguiente, mediante la *interfaz* correspondiente.
-    * **Actuar**    => *Actuator*
-      * Recupera *eventos* generados por el módulo anterior, mediante la *interfaz* correspondiente, que estimulan su *statechart*
-      * Actúa sobre **GPIO** 
-
-</details>
-
-<details>
-<summary><b>Software Design Patterns</b></summary>
-
-  * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
-
-</details>
-
 ---
 
 ### Proyectos de referencia
@@ -55,4 +38,4 @@
 | [<b>STM32 Project</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/STM32_Project.md) | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
 | [<b>Semihosting</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Semihosting.md) | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
 | [<b>Cyclic Executive</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Cyclic_Executive.md) | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | <b>X</b> |
-| <b>Model Integration</b> | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
+| [<b>Model Integration</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Model_Integration.md) | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
