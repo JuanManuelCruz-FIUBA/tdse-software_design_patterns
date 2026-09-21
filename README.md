@@ -222,7 +222,4 @@ cyclic_executive
 | <b>STM32 Project</b> | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
 | <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
 | <b>Cyclic Executive</b> | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | <b>X</b> |
-| Model Integration | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
-| Porting C Code 01 | tdse-tp3_01-porting_c_code_solved | |
-| Porting C Code 02 | tdse-tp3_02-porting_c_code_solved | |
-| System Setup Menu | tdse-tp3_03-system_setup_menu     | | 
+| <b>Model Integration</b> | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
