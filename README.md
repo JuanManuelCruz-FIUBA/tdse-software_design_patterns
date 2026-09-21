@@ -67,6 +67,8 @@ stm32_project
       * Modificar el código fuente  código en el archivo (```main.c```), como se detalla a continuación.
   
 ```
+semihosting/Code/Src/main.c
+
 /* USER CODE BEGIN Includes */
 
 #include "stdio.h"
@@ -99,6 +101,93 @@ extern void initialise_monitor_handles(void);
 </details>
 
 <details>
+<summary><b>Cyclic Executive ...</b></summary>
+
+  * Modelo de programación y planificación de tareas
+    * Ejecuta una secuencia fija de **tareas** en un bucle infinito (*Super-Loop*).
+    * Permite implementar **Event-Triggered Systems**.
+    * Permite gestionar *eventos* por **Polling & Interrupts**.
+    * Permite ejecutar *Update by Time Code* con **period = 1mS**.
+    * Permite *Modularizar* el código en en *tareas* del tipo: **Escrutar - Procesar - Actuar**.
+  * Requiere de:
+      * Configurar el linker para agregar una biblioteca (y sus opciones de linkeo).
+      * Excluir un archivo de la compilación para evitar conflictos con las llamadas al sistema del semihosting.
+      * Configurar el depurador (*OpenOCD*).
+      * Modificar el código fuente  código de dos archivo (```stm32f1xx_it.c``` & ```main.c```), como se detalla a continuación.
+      * Agregar al *árbol de directorios* del proyecto, la carpeta **app**, destinada a almacenar código fuente y archivos de configuración creados por el usuario.
+      * Incluir en la compilación, las carpetas **app/inc** & **app**, que contienen  archivos de encabezamiento (```.h```), de código fuente (```.c```) y de comentario (```.txt```).
+
+```
+cyclic_executive/Code/Src/stm32f1xx_it.c
+
+  /* USER CODE BEGIN SysTick_IRQn 1 */
+
+  HAL_SYSTICK_IRQHandler();
+
+  /* USER CODE END SysTick_IRQn 1 */
+
+/* USER CODE BEGIN Includes */
+
+/* Application includes */
+#include "logger.h"
+#include "app.h"
+
+/* USER CODE END Includes */
+
+
+cyclic_executive/Code/Src/main.c
+
+/* USER CODE BEGIN 0 */
+
+#if (1 == LOGGER_CONFIG_USE_SEMIHOSTING)
+
+extern void initialise_monitor_handles(void);
+
+#endif
+
+/* USER CODE END 0 */
+  . . .
+
+  /* USER CODE BEGIN 1 */
+
+  #if (1 == LOGGER_CONFIG_USE_SEMIHOSTING)
+
+  initialise_monitor_handles();
+
+  #endif
+
+  /* USER CODE END 1 */
+  . . .
+
+  /* USER CODE BEGIN 2 */
+
+  /* Application Init */
+  app_init();
+
+  /* USER CODE END 2 */
+  . . .
+
+    /* USER CODE BEGIN 3 */
+
+    /* Application Update */
+    app_update();
+
+  }
+  /* USER CODE END 3 */
+```
+
+```
+cyclic_executive
+├───.settings
+├───Core
+├───Drivers
+└───app
+    ├───inc
+    └───src
+```
+</details>
+
+<details>
 <summary>Software Design Patterns:</summary>
 
   * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
@@ -108,12 +197,12 @@ extern void initialise_monitor_handles(void);
 ---
 
 ### Proyectos de referencia
-| Proyecto          | Link |   |
-| :---------------- | :----| - |
-| <b>STM32 Project</b> | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | X |
-| <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | X |
-| Cyclic Executive  | tdse-tp0_03-cyclic_executive      |   |
-| Model Integration | tdse-tp2_00-model_integration     |   |
-| Porting C Code 01 | tdse-tp3_01-porting_c_code_solved |   |
-| Porting C Code 02 | tdse-tp3_02-porting_c_code_solved |   |
-| System Setup Menu | tdse-tp3_03-system_setup_menu     |   | 
+| Proyecto | Link |   |
+| :------- | :----| - |
+| <b>STM32 Project</b> | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | <b>X</b> |
+| <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | <b>X</b> |
+| <b>Cyclic Executive</b> | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | |
+| Model Integration | tdse-tp2_00-model_integration     | |
+| Porting C Code 01 | tdse-tp3_01-porting_c_code_solved | |
+| Porting C Code 02 | tdse-tp3_02-porting_c_code_solved | |
+| System Setup Menu | tdse-tp3_03-system_setup_menu     | | 
