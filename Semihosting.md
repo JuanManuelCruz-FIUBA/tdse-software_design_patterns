@@ -1,5 +1,4 @@
-<details>
-<summary><b>Semihosting ...</b></summary>
+<b>Semihosting ...</b>
 
   * Semihosting es un mecanismo que permite al microcontrolador usar los recursos de tu computadora (como la pantalla, el teclado o archivos), a través de la placa de depuración.
     * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico, requiere de:
@@ -39,5 +38,3 @@ extern void initialise_monitor_handles(void);
 
   /* USER CODE END 2 */
 ```
-
-</details>
