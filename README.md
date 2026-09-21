@@ -3,7 +3,7 @@
 ### Contexto
 
 <details>
-<summary id="ref-0"><b>Codificamos en C, soluciones del tipo ...</b></summary>
+<summary><b>Codificamos en C, soluciones del tipo ...</b></summary>
 
 * **Bare Metal** (sin Sistema Operativo)
   * **Cyclic Executive**
@@ -20,10 +20,11 @@
   * **STM32CubeIDE**, entorno de desarrollo integrado multi-OS en C/C++ para el desarrollo de código STM32.
   * **STM32CubeMX**, herramienta gráfica que simplifica la configuración de los productos STM32 y genera el código de inicialización correspondiente.
   * **HAL**, capa de abstracción de hardware de STM32, un software embebido que garantiza la máxima portabilidad en toda la gama STM32.
+
 </details>
 
 <details>
-<summary id="ref-1"><b>STM32 Project ...</b></summary>
+<summary><b>STM32 Project ...</b></summary>
 
   * Proyecto generado con **STM32CubeIde** (*STM32CubeMX*), mediante la opción *File > New > STM32 Project*, que permite iniciar desde cero un archivo de proyecto, seleccionando el *chip* o la *placa* que se va a usar (en nuestro caso la *placa*).
   * Contiene una estructura de directorios de base (ver *árbol de directorios* al pie) y  entre otros, archivos de encabezamiento (```.h```), de código fuente (```.c, .s```), de comentario (```.txt```) y de configuración ```.ioc```.
@@ -56,7 +57,7 @@ stm32_project
 </details>
 
 <details>
-<summary id="ref-2"><b>Semihosting ...</b></summary>
+<summary><b>Semihosting ...</b></summary>
 
   * Semihosting es un mecanismo que permite al microcontrolador usar los recursos de tu computadora (como la pantalla, el teclado o archivos), a través de la placa de depuración.
     * Sirve para ver mensajes de funciones como ```printf()``` directamente en la consola del IDE sin configurar un puerto físico, requiere de:
@@ -101,6 +102,7 @@ extern void initialise_monitor_handles(void);
 <summary>Software Design Patterns:</summary>
 
   * Los patrones de diseño (**design patterns**) son soluciones habituales a problemas comunes en el diseño de software. Cada patrón es como un plano que se puede personalizar para resolver un problema de diseño particular de tu código.
+
 </details>
 
 ---
@@ -108,8 +110,8 @@ extern void initialise_monitor_handles(void);
 ### Proyectos de referencia
 | Proyecto          | Link |   |
 | :---------------- | :----| - |
-| [STM32 Project](#ref-1) | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | X |
-| [Semihosting](#ref-2) | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | X |
+| <b>STM32 Project</b> | [stm32_project](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/stm32_project) | X |
+| <b>Semihosting</b> | [semihosting](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/semihosting) | X |
 | Cyclic Executive  | tdse-tp0_03-cyclic_executive      |   |
 | Model Integration | tdse-tp2_00-model_integration     |   |
 | Porting C Code 01 | tdse-tp3_01-porting_c_code_solved |   |
