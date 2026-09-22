@@ -14,7 +14,11 @@
       * El **period** de ejecución de tareas (**1mS**) lo aporta una variable actualizada por un *Callback* del *Handler* de la *Interrupción* del **Systick**.
       * La vinculación entre ```main.c``` y ```app.c``` (**Cyclic Executive**) es mediante las funciones ```app_int()``` & ```app_update()```.
       * La vinculación entre ```app.c``` (**Cyclic Executive**) y ```task_name.c``` (**Task**) es mediante las funciones ```task_name_int()``` & ```task_a_update()```.
-      * Agregar al *árbol de directorios* del proyecto, la carpeta **app**, destinada a almacenar código fuente y archivos de configuración creados por el usuario.
+	  * las funciones ```app_int()``` & ```app_update()```, gentionan datos de cada tarea, encapsulados en dos tipos de estructuras:
+		* Una estructura para datos fijos del tipo ```task_cfg_t```.
+		* Una estructura para datos variables del tipo ```task_dta_t```.
+		* Dichas estructuras se agrupan en sendos arrays, las del tipo ```task_cfg_t``` en ```task_cfg_list[TASK_QTY]``` y las del tipo ```task_dta_t``` en ```task_dta_list[TASK_QTY]```.
+	  * Agregar al *árbol de directorios* del proyecto, la carpeta **app**, destinada a almacenar código fuente y archivos de configuración creados por el usuario.
       * Incluir en la compilación, las carpetas **app/inc** & **app**, que contienen  archivos de encabezamiento (```.h```), de código fuente (```.c```) y de comentario (```.txt```).
 
 ```
