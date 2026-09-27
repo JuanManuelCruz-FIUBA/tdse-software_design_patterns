@@ -1,4 +1,4 @@
-Example: tdse-tp0_03-cyclic_executive
+Example: gpio_interrupt
 
  Description:
  Bare Metal - Event-Triggered Systems (ETS)
