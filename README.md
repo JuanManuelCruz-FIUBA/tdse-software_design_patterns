@@ -69,11 +69,4 @@
 | Interfaz EMG para Monitoreo de Actividad Muscular | [link](https://github.com/lucianafalcon/tdse-tf_3/blob/memoria-final-y-video/OneDrive/Desktop/TPF_embebidos/final/README.md) | [Link](https://github.com/lucianafalcon/tdse-tf_3/tree/memoria-final-y-video/OneDrive/Desktop/TPF_embebidos/final/tdse-tp3_04-interactive_menu-main)  |
 | Jarra Eléctrica | [link](https://github.com/pauleDFT/TDSE_TF_2c2025_3_06_REENTREGA/blob/Reentrega/Memoria_t%C3%A9cnica_e_im%C3%A1genes/Memoria_del_trabajo_final.md) | [Link](https://github.com/pauleDFT/TDSE_TF_2c2025_3_06_REENTREGA/tree/Reentrega/Codigo_trabajo_final/tdse_tf_06)  |
 
-
 ---
-
-### Proyectos de prueba
-| Referencias | Fuentes |   |
-| :------- | :----| - |
-| | |
-
