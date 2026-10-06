@@ -3,20 +3,20 @@
   * Con **STM32CubeIde** (*STM32CubeMX*), es posible gestionar *excepciones e interrupciones* de un **STM32 Project**. El código así generado, vinculado con *excepciones e interrupciones* se encuentra en los *archivos o carpetas*:
     * ```gpio_interrupt/Core/Src/main.c```, contiene el prototipo y el código de la función de inicialización del generador de *excepción o interrupción* (**en nuestro caso GPIO**), ejecutado por la función ```int main(void)``` y potencialmente su **handle**.
     *  ```gpio_interrupt/Core/Startup/startup_stm32f103rbtx.s```, contienen **vectores** de *excepciones e interrupciones* bajo el *rótulo* ```g_pfnVectors:```
-      * Dichos **vectores** tienen en común el sufijo ```_IRQHandler()```, su código se encuentra en el  *archivo* ```gpio_interrupt/Code/Src/system_stm32f1xx.c```, ejecutan **funciones de HAL** con prefijo```HAL_``` y sufijo ```_IRQHandler()```.
-      * Dichas **funciones de HAL** se encuentran en en *archivos* ```.c``` en la *carpeta* ```gpio_interrupt/Drivers/STM32F1xx_HAL_Driver/Src```, que tienen en común el prefijo ```stm32f1xx_hal_```
+      * Dichos **vectores** tienen en común el sufijo ```_IRQHandler()```, su código se encuentra en el  *archivo* ```gpio_interrupt/Code/Src/stm32f1xx_it.c```, ejecutan **funciones de HAL** con prefijo```HAL_``` y sufijo ```_IRQHandler()```.
+      * Dichas **funciones de HAL** se encuentran en en *archivos* ```.c``` en la *carpeta* ```gpio_interrupt/Drivers/STM32F1xx_HAL_Driver/Src```, que tienen en común el prefijo ```stm32f1xx_hal_``` (**en nuestro caso GPIO**, en el archivo ```stm32f1xx_hal_gpio.c```)
       * Dichas **funciones de HAL**, ejecutan **callbacks**, con prefijo```HAL_``` y sufijo ```_Callback()```.
       * Dichos **callbacks** están definidos en forma *débil* ```__weak```, para completar o reemplazar por el usuario. En nuestros proyectos el usuario reemplazará en el *archivo* ```gpio_interrupt/app/src/app_it.c```.
 
-| GPIO (X: A to E) | Handle | Vector | HAL Function | Callback |
+| GPIO (X: A to E) | Handle (```main.c```) | Vector (```startup_stm32f103rbtx.s``` & ```stm32f1xx_it.c```) | HAL Function (```stm32f1xx_it.c``` & ```stm32f1xx_hal_gpio.c```) | Callback (```stm32f1xx_hal_gpio.c``` => ```app_it.c```) |
 |:---- | :----- |  :----- | :------------- | :------- |
-| PX0  |  - | EXTI0_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX1  |  - | EXTI1_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX2  |  - | EXTI2_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX3  |  - | EXTI3_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX4  |  - | EXTI4_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX5 to 9 |  - | EXTI9_5_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
-| PX10 to 15 |  - | EXTI15_10_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX0  | - | EXTI0_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX1  | - | EXTI1_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX2  | - | EXTI2_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX3  | - | EXTI3_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX4  | - | EXTI4_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX9 to 5 | - | EXTI9_5_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
+| PX15 to 10 | - | EXTI15_10_IRQHandler() | HAL_GPIO_EXTI_IRQHandler() | HAL_GPIO_EXTI_Callback() |
 
 ```
 gpio_interrupt/Core/Src/main.c
