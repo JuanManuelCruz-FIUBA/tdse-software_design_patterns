@@ -69,7 +69,6 @@ void app_it_init(void)
 	/* Start timer */
 	HAL_TIM_Base_Start_IT(&htim2);
 	HAL_TIM_Base_Start_IT(&htim3);
-
 }
 
 void HAL_SYSTICK_Callback(void)
