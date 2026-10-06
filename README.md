@@ -41,6 +41,7 @@
 | [<b>Cyclic Executive</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Cyclic_Executive.md) | [cyclic_executive](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/cyclic_executive) | <b>X</b> |
 | [<b>Model Integration</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Model_Integration.md) | [model_integration](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/model_integration) | <b>X</b> |
 | [<b>GPIO Interrupt</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/GPIO_Interrupt.md) | [gpio_interrupt](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/gpio_interrupt) | <b>X</b> |
+| [<b>Timer Interrupt</b>](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/blob/main/Timer_Interrupt.md) | [gpio_interrupt](https://github.com/JuanManuelCruz-FIUBA/tdse-software_design_patterns/tree/main/TdSE_workspace/timer_interrupt) | <b>X</b> |
 
 ---
 
